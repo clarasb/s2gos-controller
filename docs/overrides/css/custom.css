@@ -1,4 +1,4 @@
-/* adjust representation of xr.Datasets, solution by:
+/* Adjust representation of xr.Datasets, solution by:
  https://github.com/danielfrg/mkdocs-jupyter/issues/164#issuecomment-1875664148 */
 .md-typeset pre.xr-text-repr-fallback {
     display: none;
@@ -48,6 +48,11 @@
     box-sizing: border-box;
 }
 
+/* Change font-size Jupyter output changed by hook (notebooks_json_output.py)*/
+.jupyter-wrapper .text-json{
+    font-size: .6rem;
+}
+
 /* Neutralize dark-theme influence inside the wrapper */
 /* Force .xr-wrap and .bk-panel-models-layout-Column to keep light colors, even in dark theme */
 [data-md-color-scheme="slate"] .xr-wrap,
@@ -57,15 +62,14 @@
     color: #000 !important;
 }
 
-/* fix code cells/blocks inside */
+/* Fix code cells/blocks inside */
 [data-md-color-scheme="slate"] .xr-wrap pre,
 [data-md-color-scheme="slate"] .xr-wrap code{
     background: #f6f8fa !important;
     color: #000 !important;
 }
 
-
-
+/* Enable centered images in docs*/
 .centered-logo {
     display: block;
     margin: 0 auto;
